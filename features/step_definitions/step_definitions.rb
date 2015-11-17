@@ -1,6 +1,6 @@
 Given(/^Application is up and running$/) do
   @driver.navigate.to 'http://www.mobiquityinc.com/'
-  sleep 5
+  sleep 2.5
 end
 
 Then(/^I take a screenshot and save it to ~\/Screenshots$/) do
@@ -12,5 +12,5 @@ And(/^I search for "([^"]*)"$/) do |key|
   sleep 5 if ENV['BROWSER'] == 'safari'
   on(MobSite).search_element.send_keys key
   on(MobSite).search_button_element.click
-  sleep 5
+  sleep 2.5
 end

@@ -9,7 +9,6 @@ module Mobile
     end
 
     def web(&block)
-      puts 'executing web block'
       yield block if ENV['PLATFORM'] == 'web'
     end
   end
